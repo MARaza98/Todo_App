@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import StackNaigator from '../stackNaigator';
+import SettingsScreen from '../screen/complete';
 import HomeScreen from '../screen/home';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -14,18 +14,19 @@ export default function MyTabs() {
         name="All"
         component={HomeScreen}
         options={{
-          headerShown: false,
+          headerStatusBarHeight: 10,
+          headerTintColor: 'white',
+          headerStyle: { backgroundColor: '#9395D3' },
           tabBarIcon: () => (
             <MaterialCommunityIcons name="order-bool-ascending" size={20} />
           ),
         }}
       />
       <Tab.Screen
-        name="Check"
-        component={StackNaigator}
+        name="Completed"
+        component={SettingsScreen}
         options={{
           headerStatusBarHeight: 10,
-          headerShown: false,
           headerTintColor: 'white',
           headerStyle: { backgroundColor: '#9395D3' },
           tabBarIcon: () => (
