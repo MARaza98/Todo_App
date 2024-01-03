@@ -10,12 +10,7 @@ export default function AddTask() {
     <View style={{ flex: 1, marginHorizontal: 10 }}>
       <AppInput
         autoCapitalize="none"
-        onChangeText={item => {
-          console.log(
-            'debug > Product:', item
-          )
-          setProduct(item)
-        }}
+        onChangeText={item => setProduct(item)}
         autoCorrect={false}
         placeholder="Product"
       />
@@ -30,5 +25,5 @@ export default function AddTask() {
     </View>
   );
 }
-
+  
 const styles = StyleSheet.create({});
