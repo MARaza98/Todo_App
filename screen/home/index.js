@@ -19,7 +19,9 @@ export default function HomeScreen() {
         }}>
         <Text
           style={styles.cricle}
-          onPress={() => navigation.navigate('Add Task')}>
+          onPress={() => navigation.navigate('Add Task',upDate = date =>{
+            console.log(date)
+          })}>
           <MaterialCommunityIcons name="plus-thick" size={25} color="white" />
         </Text>
       </View>

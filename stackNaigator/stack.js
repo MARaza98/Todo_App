@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import AddTask from '../screen/add_task';
 import MyTabs from '../bottomNavigator';
-// import SettingsScreen from '../screen/complete';
 
 import { createStackNavigator } from '@react-navigation/stack';
 

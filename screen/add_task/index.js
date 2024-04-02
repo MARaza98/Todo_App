@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import AppButton from '../component/appButton';
 import AppInput from '../component/appInput';
 
-export default function AddTask() {
+export default function AddTask({route}) {
   let [product, setProduct] = useState();
   let [detail, setDetail] = useState();
   return (
@@ -21,9 +21,11 @@ export default function AddTask() {
         placeholder="Detail"
       />
 
-      <AppButton title="ADD" onPress={() => console.log(product, detail)} />
+      <AppButton title="ADD" onPress={() => {
+        route.params.upDate(product,detail)
+      }} />
     </View>
   );
 }
-  
+
 const styles = StyleSheet.create({});
